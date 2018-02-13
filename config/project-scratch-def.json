@@ -4,5 +4,9 @@
     "package2AncestorIds":"",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled","ChatterEnabled"]
-    }
+    },
+    "features": [
+        "DebugApex"
+    ],
+    "hasSampleData": true
 }
