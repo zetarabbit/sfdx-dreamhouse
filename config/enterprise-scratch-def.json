@@ -2,7 +2,7 @@
   "orgName": "Your Company",
   "edition": "Enterprise",
   "features": [
-        "externalSharing"
+        "ExternalSharing"
   ],
   "orgPreferences": {
     "enabled": [
