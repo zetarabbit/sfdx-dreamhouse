@@ -1,6 +1,9 @@
 {
   "orgName": "Your Company",
   "edition": "Enterprise",
+  "features": [
+        "externalSharing"
+  ],
   "orgPreferences": {
     "enabled": [
       "S1DesktopEnabled"
