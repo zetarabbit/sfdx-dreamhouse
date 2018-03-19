@@ -12,5 +12,12 @@
     "files": [
       "properties-data.json"
     ]
+  },
+  {
+    "sobject": "Bot_Command__c",
+    "resolveRefs": true,
+    "files": [
+      "commands-data.json"
+    ]
   }
 ]
