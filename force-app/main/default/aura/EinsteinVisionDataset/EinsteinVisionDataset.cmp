@@ -21,9 +21,9 @@
         Dataset Id: {!v.dataset.id}
         <lightning:tabset >
             <lightning:tab label="Labels" onactive="{!c.onLabelsTab}">                
-                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
                     <thead>
-                        <tr class="slds-text-title--caps">
+                        <tr class="slds-text-title_caps">
                             <th scope="col">
                                 <div class="slds-truncate" title="Name">Label</div>
                             </th>
@@ -47,9 +47,9 @@
                 </table>
             </lightning:tab>
             <lightning:tab label="Models" onactive="{!c.onModelsTab}">
-                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
                     <thead>
-                        <tr class="slds-text-title--caps">
+                        <tr class="slds-text-title_caps">
                             <th scope="col">
                                 <div class="slds-truncate" title="Model Id">Model Id</div>
                             </th>

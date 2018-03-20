@@ -23,7 +23,7 @@
                 </div>
                 
             </div>
-            <div class="slds-backdrop slds-backdrop--open"></div>
+            <div class="slds-backdrop slds-backdrop_open"></div>
         </aura:if>
     </lightning:card>
 

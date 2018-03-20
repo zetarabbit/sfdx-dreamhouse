@@ -22,7 +22,7 @@
         </aura:set>
         
         <aura:if isTrue="{!v.recordId==undefined}">
-            <div aura:id="selectSection" class="select slds-text-color--weak">
+            <div aura:id="selectSection" class="select slds-text-color_weak">
                 Select a property
             </div>
         </aura:if>
