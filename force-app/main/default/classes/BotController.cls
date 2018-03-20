@@ -1,6 +1,6 @@
 public with sharing class BotController {
 
-    class HandlerMapping {
+    public class HandlerMapping {
         
         public String handlerClassName;
         public Pattern utterancePattern;
@@ -33,23 +33,16 @@ public with sharing class BotController {
                 String nextCommand = session.get('nextCommand');
                 if (nextCommand != null) {
                     Type t = Type.forName('', nextCommand);
-                    BotHandler h = (BotHandler)t.newInstance();
-                    return h.handle(utterance, null, session, fileName, fileContent);
+                    BotHandler handler = (BotHandler)t.newInstance();
+                    return handler.handle(utterance, null, session, fileName, fileContent);
                 }
             }
         
             for (HandlerMapping mapping : BotController.handlerMappings) {
-                // String patternToMatch = mapping.utterancePattern.pattern();
-                // System.debug('Pattern to match: ' + patternToMatch);
-                Matcher utteranceMatcher = mapping.utterancePattern.matcher(utterance);
-                if (utteranceMatcher.matches()) {
-                    Type t = Type.forName('', mapping.handlerClassName);
-                    BotHandler h = (BotHandler)t.newInstance();
-                    List<String> params = new List<String>();
-                    for (Integer i=1; i<=utteranceMatcher.groupCount(); i=i+1) {
-                        params.add(utteranceMatcher.group(i).trim());
-                    }
-                    return h.handle(utterance, params, session, fileName, fileContent);
+                List<String> params = new List<String>();
+                BotHandler handler = findMatchingHandlerIfPossible(mapping, utterance, session, params);
+                if (handler != null) {
+                    return handler.handle(utterance, params, session, fileName, fileContent);
                 }
             }
             
@@ -61,5 +54,21 @@ public with sharing class BotController {
         }
         
     }
+
+    public static BotHandler findMatchingHandlerIfPossible(HandlerMapping mapping, String utterance, Map<String, String> session, List<String> params) {
+        // String patternToMatch = mapping.utterancePattern.pattern();
+        // System.debug('[BotController.cls] Pattern to match: ' + patternToMatch);
+        Matcher utteranceMatcher = mapping.utterancePattern.matcher(utterance);
+        if (utteranceMatcher.matches()) {
+            Type t = Type.forName('', mapping.handlerClassName);
+            BotHandler handler = (BotHandler)t.newInstance();
+            for (Integer i = 1; i <= utteranceMatcher.groupCount(); i++) {
+                params.add(utteranceMatcher.group(i).trim());
+            }
+            return handler;
+        } else {
+            return null;
+        }
+}
     
 }
