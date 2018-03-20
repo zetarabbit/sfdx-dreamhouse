@@ -5,6 +5,20 @@
         }
     	var utterance = event.target.value;
         var messages = component.get("v.messages");
+
+        // // If there is an on-going session
+        // var session = component.get("v.session");
+
+        // // Convert price to a numerical string
+        // if(session && session.step && session.step.match(/price/i)) {
+        //     try {
+        //         utterance = nlp(utterance).values().toNumber().out();
+        //     } catch (e) {
+        //         console.error("Cannot perform NLP on price");
+        //         console.error(e);
+        //     }
+        // }
+
         messages.push({author: "Me", messageText: utterance});
         event.target.value = "";
         component.set("v.messages", messages);
