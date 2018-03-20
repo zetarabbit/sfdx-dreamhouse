@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Launch Apex Debugger",
             "type": "apex",
@@ -13,13 +14,29 @@
             "entryPointFilter": "",
             "sfdxProject": "${workspaceRoot}"
         },
-        {
-            "name": "Launch Apex Replay Debugger",
-            "type": "apex-replay",
-            "request": "launch",
-            "logFile": "${command:AskForLogFileName}",
-            "stopOnEntry": true,
-            "trace": true
-        }
+        // {
+        //     "name": "Launch Apex Replay Debugger (Reillustrate Issue)",
+        //     "type": "apex-replay",
+        //     "request": "launch",
+        //     "logFile": "${workspaceRoot}/logs/ReplayDebugger_ReillustrateIssue.log",
+        //     "stopOnEntry": true,
+        //     "trace": true
+        // },
+        // {
+        //     "name": "Launch Apex Replay Debugger (IllustrateFindHouse Problem)",
+        //     "type": "apex-replay",
+        //     "request": "launch",
+        //     "logFile": "${workspaceRoot}/logs/ReplayDebugger_IllustrateFindHouseProblem.log",
+        //     "stopOnEntry": true,
+        //     "trace": true
+        // },
+        // {
+        //     "name": "Launch Apex Replay Debugger (IllustrateFindHouse Problem More Clearly)",
+        //     "type": "apex-replay",
+        //     "request": "launch",
+        //     "logFile": "${workspaceRoot}/logs/ReplayDebugger_IllustrateFindHouseProblemMoreClearly.log",
+        //     "stopOnEntry": true,
+        //     "trace": true
+        // }
     ]
 }

@@ -39,6 +39,8 @@ public with sharing class BotController {
             }
         
             for (HandlerMapping mapping : BotController.handlerMappings) {
+                // String patternToMatch = mapping.utterancePattern.pattern();
+                // System.debug('Pattern to match: ' + patternToMatch);
                 Matcher utteranceMatcher = mapping.utterancePattern.matcher(utterance);
                 if (utteranceMatcher.matches()) {
                     Type t = Type.forName('', mapping.handlerClassName);

@@ -40,8 +40,10 @@ public class HandlerFindProperties implements BotHandler {
         } else if (step == 'maxPrice') {
             session.put('maxPrice', utterance);
             String city = session.get('city');
-            Decimal minPrice = Decimal.valueOf(session.get('minPrice'));
-            Decimal maxPrice = Decimal.valueOf(session.get('maxPrice'));
+            String minPriceStr = session.get('minPrice');
+            String maxPriceStr = session.get('maxPrice');
+            Decimal minPrice = Decimal.valueOf(minPriceStr);
+            Decimal maxPrice = Decimal.valueOf(maxPriceStr);
             List<Property__c> properties = 
                 [SELECT Id, Name, Beds__c, Baths__c, Price__c FROM Property__c
                  WHERE City__c = :city AND 
