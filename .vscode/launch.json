@@ -14,29 +14,29 @@
             "entryPointFilter": "",
             "sfdxProject": "${workspaceRoot}"
         },
-        // {
-        //     "name": "Launch Apex Replay Debugger (Reillustrate Issue)",
-        //     "type": "apex-replay",
-        //     "request": "launch",
-        //     "logFile": "${workspaceRoot}/logs/ReplayDebugger_ReillustrateIssue.log",
-        //     "stopOnEntry": true,
-        //     "trace": true
-        // },
-        // {
-        //     "name": "Launch Apex Replay Debugger (IllustrateFindHouse Problem)",
-        //     "type": "apex-replay",
-        //     "request": "launch",
-        //     "logFile": "${workspaceRoot}/logs/ReplayDebugger_IllustrateFindHouseProblem.log",
-        //     "stopOnEntry": true,
-        //     "trace": true
-        // },
-        // {
-        //     "name": "Launch Apex Replay Debugger (IllustrateFindHouse Problem More Clearly)",
-        //     "type": "apex-replay",
-        //     "request": "launch",
-        //     "logFile": "${workspaceRoot}/logs/ReplayDebugger_IllustrateFindHouseProblemMoreClearly.log",
-        //     "stopOnEntry": true,
-        //     "trace": true
-        // }
+        {
+            "name": "Launch Apex Replay Debugger (Reillustrate Issue)",
+            "type": "apex-replay",
+            "request": "launch",
+            "logFile": "${workspaceRoot}/logs/ReplayDebugger_ReillustrateIssue.log",
+            "stopOnEntry": true,
+            "trace": true
+        },
+        {
+            "name": "Launch Apex Replay Debugger (Illustrate FindHouse Problem)",
+            "type": "apex-replay",
+            "request": "launch",
+            "logFile": "${workspaceRoot}/logs/ReplayDebugger_IllustrateFindHouseProblem.log",
+            "stopOnEntry": true,
+            "trace": true
+        },
+        {
+            "name": "Launch Apex Replay Debugger (Illustrate FindHouse Problem More Clearly)",
+            "type": "apex-replay",
+            "request": "launch",
+            "logFile": "${workspaceRoot}/logs/ReplayDebugger_IllustrateFindHouseProblemMoreClearly.log",
+            "stopOnEntry": true,
+            "trace": true
+        }
     ]
 }
