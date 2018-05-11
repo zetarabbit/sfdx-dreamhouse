@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "Launch Apex Debugger",
             "type": "apex",
@@ -13,6 +12,14 @@
             "requestTypeFilter": [],
             "entryPointFilter": "",
             "sfdxProject": "${workspaceRoot}"
+        },
+        {
+            "name": "Launch Apex Replay Debugger",
+            "type": "apex-replay",
+            "request": "launch",
+            "logFile": "${command:AskForLogFileName}",
+            "stopOnEntry": true,
+            "trace": true
         },
         {
             "name": "Launch Apex Replay Debugger (Reillustrate Issue)",
