@@ -22,8 +22,9 @@
     <aura:handler name="init" value="{!this}" action="{!c.calculateMonthlyPayment}" />
 
 	<div>
+		<p>Test String</p>
         <div class="input">
-            <lightning:input aura:id="principal" type="number" label="Principal:" value="{!v.principal}"/>
+            <lightning:input aura:id="principal" type="number" label="Principal Pepe:" value="{!v.principal}"/>
             <lightning:select name="select1" label="Years:" value="{!v.years}">
                 <option value="20">20</option>
                 <option value="25">25</option>
